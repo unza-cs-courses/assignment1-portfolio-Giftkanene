@@ -1,261 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website for [Your Name]">
-    <title>Portfolio - [Your Name]</title>
+    <meta name="description" content="Professional portfolio website for Gift Kanene – Software Engineering Student & Web Developer">
+    <title>Gift Kanene – Portfolio</title>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ 
     <link rel="stylesheet" href="css/styles.css">
+ 
 </head>
 <body>
-    <!--
-    ============================================================
-    ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
-    CSC4035 Web Programming and Technologies
-
-    Instructions:
-    1. Complete all TODO sections below
-    2. Use semantic HTML5 elements
-    3. Ensure all images have alt attributes
-    4. Ensure all form inputs have labels
-    5. Test responsiveness at multiple breakpoints
-    ============================================================
-    -->
-
-    <!-- Navigation -->
+ 
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+ 
     <header class="header">
-        <nav class="nav">
-            <!-- TODO: Create navigation with links to each section
-                 Requirements:
-                 - Logo/site title
-                 - Navigation links (Home, About, Projects, Contact)
-                 - Mobile-friendly (hamburger menu optional)
-                 - Active state indication
-            -->
+        <nav class="nav" aria-label="Main navigation">
+ 
             <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+                <a href="#home">
+                    <i class="fa-solid fa-code" aria-hidden="true"></i>
+                    Gift<span>.</span>Kanene
+                </a>
             </div>
+ 
             <ul class="nav__menu">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home"     class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+ 
+            <div class="nav__controls">
+                <button class="theme-toggle" id="theme-btn" aria-label="Toggle dark/light mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <label class="nav__hamburger" for="nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </label>
+            </div>
+ 
         </nav>
     </header>
-
+ 
     <main>
-        <!-- Hero Section -->
+ 
         <section id="home" class="hero">
-            <!-- TODO: Create hero section
-                 Requirements:
-                 - Your name (h1)
-                 - Professional tagline
-                 - Call-to-action button
-                 - Consider using Flexbox for layout
-            -->
             <div class="hero__content">
-                <h1>Your Name</h1>
+                <h1>Hi, I'm <span>Gift Kanene</span></h1>
                 <p class="hero__tagline">
-                    <!-- TODO: Add your professional tagline -->
-                    Web Developer | Designer | Problem Solver
+                    Software Engineering Student &amp; Web Developer&nbsp;—
+                    building accessible, responsive experiences from Lusaka, Zambia.
                 </p>
-                <a href="#contact" class="btn btn--primary">Get In Touch</a>
+                <a href="#contact" class="btn btn--primary">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    Get In Touch
+                </a>
             </div>
         </section>
-
-        <!-- About Section -->
+ 
         <section id="about" class="about">
-            <!-- TODO: Create about section
-                 Requirements:
-                 - Section heading (h2)
-                 - Profile image with alt text
-                 - Professional bio (150+ words)
-                 - Skills list
-                 - Use CSS Grid or Flexbox for layout
-            -->
             <div class="container">
-                <h2>About Me</h2>
+                <div class="section-heading"><h2>About Me</h2></div>
                 <div class="about__content">
                     <div class="about__image">
-                        <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
+                        <div class="img-placeholder" aria-label="Profile photo of Gift Kanene">
+                            <img src="images/profile.jpg" alt="Portrait of Gift Kanene">
+                        </div>
                     </div>
                     <div class="about__text">
                         <p>
-                            <!-- TODO: Write your professional bio (150+ words)
-                                 Include:
-                                 - Your background
-                                 - Your interests in web development
-                                 - Your goals
-                                 - What makes you unique
-                            -->
-                            [Your professional bio goes here. Write at least 150 words about yourself,
-                            your background, your passion for web development, and your goals.
-                            This is your opportunity to introduce yourself to potential employers or clients.]
+                            Hello! I'm <strong>Gift Kanene</strong>, a passionate Computer Science student
+                            majoring in Software Engineering at a university in Lusaka, Zambia. My journey
+                            into web development started with curiosity — a simple desire to understand how
+                            the websites I visited every day actually worked. That curiosity quickly turned
+                            into a deep love for crafting digital experiences.
+                        </p>
+                        <p>
+                            I specialise in building clean, accessible, and responsive user interfaces using
+                            HTML, CSS, and JavaScript. I believe great web development is not just about
+                            making things look good — it's about making them work seamlessly for every user,
+                            on every device. I follow a mobile-first approach and take accessibility seriously
+                            in everything I build.
+                        </p>
+                        <p>
+                            Beyond the front-end, I'm growing my skills in back-end technologies like Node.js
+                            and databases, with the goal of becoming a well-rounded full-stack developer.
+                            I enjoy collaborative projects, open-source contributions, and tackling real-world
+                            problems through technology. When I'm not coding, I'm exploring new frameworks,
+                            contributing to study groups, or mentoring peers.
                         </p>
                         <h3>Skills</h3>
-                        <ul class="skills-list">
-                            <!-- TODO: Add your skills -->
+                        <ul class="skills-list" aria-label="Technical skills">
                             <li>HTML5</li>
                             <li>CSS3</li>
                             <li>JavaScript</li>
                             <li>Responsive Design</li>
-                            <!-- Add more skills -->
+                            <li>Git &amp; GitHub</li>
+                            <li>Node.js</li>
+                            <li>Flexbox &amp; Grid</li>
+                            <li>UI/UX Principles</li>
+                            <li>Python</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Projects Section -->
+ 
         <section id="projects" class="projects">
-            <!-- TODO: Create projects section
-                 Requirements:
-                 - Section heading (h2)
-                 - Minimum 3 project cards
-                 - Each card: image, title, description, link(s)
-                 - Use CSS Grid for card layout
-            -->
             <div class="container">
-                <h2>My Projects</h2>
+                <div class="section-heading">
+                    <h2>My Projects</h2>
+                    <p>A selection of work built with care and attention to detail.</p>
+                </div>
                 <div class="projects__grid">
-                    <!-- Project Card 1 -->
+ 
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
+                        <div class="project-card__image">
+                            <img src="images/ShopEase – E-Commerce UI.jpg"
+                                 alt="ShopEase e-commerce project mockup">
+                            <span class="project-card__badge">UI Design</span>
+                        </div>
                         <div class="project-card__content">
-                            <h3>Project Title 1</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3>ShopEase – E-Commerce UI</h3>
+                            <p>A fully responsive e-commerce product listing and cart interface. Features
+                               real-time cart updates, product filtering, and a clean checkout flow.</p>
+                            <div class="project-card__tags">
+                                <span>HTML5</span><span>CSS Grid</span><span>JavaScript</span>
+                            </div>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="#" class="btn btn--small">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/Giftkanene" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                </a>
                             </div>
                         </div>
                     </article>
-
-                    <!-- Project Card 2 -->
+ 
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
+                        <div class="project-card__image">
+                            <img src="images/TaskFlow – Task Manager.jpg"
+                                 alt="TaskFlow task manager project mockup">
+                            <span class="project-card__badge">Web App</span>
+                        </div>
                         <div class="project-card__content">
-                            <h3>Project Title 2</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3>TaskFlow – Task Manager</h3>
+                            <p>A drag-and-drop task management web app with priority labels,
+                               due-date reminders, and local-storage persistence. Inspired by
+                               Kanban methodology and designed for student productivity.</p>
+                            <div class="project-card__tags">
+                                <span>JavaScript</span><span>LocalStorage</span><span>CSS3</span>
+                            </div>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="#" class="btn btn--small">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/Giftkanene" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                </a>
                             </div>
                         </div>
                     </article>
-
-                    <!-- Project Card 3 -->
+ 
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project3-placeholder.jpg" alt="Screenshot of Project 3">
+                        <div class="project-card__image">
+                            <img src="images/WeatherNow – Forecast App.jpg"
+                                 alt="WeatherNow weather forecast app mockup">
+                            <span class="project-card__badge">API Project</span>
+                        </div>
                         <div class="project-card__content">
-                            <h3>Project Title 3</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3>WeatherNow – Forecast App</h3>
+                            <p>A real-time weather dashboard fetching live data from OpenWeatherMap API.
+                               Displays current conditions, a 5-day forecast, and auto-detects the
+                               user's location via the Geolocation API.</p>
+                            <div class="project-card__tags">
+                                <span>JavaScript</span><span>REST API</span><span>Geolocation</span>
+                            </div>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="#" class="btn btn--small">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/Giftkanene" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                </a>
                             </div>
                         </div>
                     </article>
-
-                    <!-- TODO: Add more project cards if desired -->
+ 
                 </div>
             </div>
         </section>
-
-        <!-- Contact Section -->
+ 
+        <!-- CONTACT -->
         <section id="contact" class="contact">
-            <!-- TODO: Create contact section
-                 Requirements:
-                 - Section heading (h2)
-                 - Contact form with:
-                   - Name field (required)
-                   - Email field (required, type="email")
-                   - Message textarea (required)
-                   - Submit button
-                 - All inputs must have associated labels
-                 - Use HTML5 validation attributes
-            -->
             <div class="container">
-                <h2>Contact Me</h2>
-                <form class="contact__form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            placeholder="Your Name"
-                            minlength="2"
-                        >
+                <div class="section-heading">
+                    <h2>Contact Me</h2>
+                    <p>Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+                </div>
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <h3>Get in Touch</h3>
+                        <p>Feel free to reach out for collaborations, project proposals, or just a friendly chat.</p>
+                        <ul class="contact__details">
+                            <li><i class="fa-solid fa-envelope"      aria-hidden="true"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5aea4aba0aba0a2aca3b185a2a8a4aca9eba6aaa8">kanenegift@gmail.com</a></li>
+                            <li><i class="fa-solid fa-location-dot"  aria-hidden="true"></i> Lusaka, Zambia</li>
+                            <li><i class="fa-brands fa-github"       aria-hidden="true"></i> github.com/Giftkanene</li>
+                            <li><i class="fa-solid fa-briefcase"     aria-hidden="true"></i> Open to internships &amp; freelance</li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            placeholder="your.email@example.com"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder="What is this regarding?"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                            rows="5"
-                            placeholder="Your message..."
-                            minlength="10"
-                        ></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
-                </form>
+                    <form class="contact__form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name" minlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="">-- Please choose --</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="project">Project Proposal</option>
+                                <option value="internship">Internship Opportunity</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="Your message..." minlength="10"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
+ 
     </main>
-
-    <!-- Footer -->
+ 
+    <!-- FOOTER -->
     <footer class="footer">
-        <!-- TODO: Create footer
-             Requirements:
-             - Copyright notice
-             - Social media links (optional)
-             - Back to top link (optional)
-        -->
         <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-            <nav class="footer__social">
-                <!-- TODO: Add your social media links -->
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
+            <p>&copy; 2026 Gift Kanene. All rights reserved.</p>
+            <nav class="footer__social" aria-label="Social media links">
+                <a href="https://github.com/Giftkanene" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> Twitter
+                </a>
+                <a href="#home" aria-label="Back to top">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Top
+                </a>
             </nav>
         </div>
     </footer>
+ 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks  = document.querySelectorAll('.nav__menu a');
+ 
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(a => a.classList.remove('active'));
+                    const active = document.querySelector(`.nav__menu a[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(s => sectionObserver.observe(s));
+ 
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-toggle').checked = false;
+            });
+        });
+ 
+        const html      = document.documentElement;
+        const themeBtn  = document.getElementById('theme-btn');
+        const themeIcon = document.getElementById('theme-icon');
+ 
+        const savedTheme = localStorage.getItem('gk-theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        setIcon(savedTheme);
+ 
+        themeBtn.addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('gk-theme', next);
+            setIcon(next);
+        });
+ 
+        function setIcon(theme) {
+            themeIcon.classList.remove('fa-moon', 'fa-sun');
+            themeIcon.classList.add(theme === 'light' ? 'fa-moon' : 'fa-sun');
+ 
+            themeIcon.style.animation = 'none';
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    themeIcon.style.animation = 'spinIn 0.4s ease both';
+                });
+            });
+        }
+    </script>
+ 
 </body>
 </html>
